@@ -1,0 +1,23 @@
+---
+id: berlin-election-results-referendum-berlin-2030-klimaneutral
+metadata:
+  name: Berlin Election Results Referendum Berlin 2030 klimaneutral
+  owner: Open Lifeworlds
+  description:
+  url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-election-results-referendum-berlin-2030-klimaneutral
+  license: CC-BY 4.0
+  updated:
+  schema:
+input_ports:
+transformation_steps:
+output_ports:
+observability:
+  quality:
+  operational:
+  slas:
+  security:
+consumers:
+use_cases:
+classification: consumer-aligned
+ubiquitous_language: []
+tags:
