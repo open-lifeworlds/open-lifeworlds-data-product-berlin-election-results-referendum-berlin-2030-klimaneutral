@@ -8,7 +8,7 @@ from lib.documentation.data_product_canvas_generator import generate_data_produc
 from lib.documentation.data_product_manifest_updater import update_data_product_manifest
 from lib.extract.data_extractor import extract_data
 from lib.tracking_decorator import TrackingDecorator
-from lib.transform.data_copier import copy_data
+from lib.transform.data_blender import blend_data
 
 file_path = os.path.realpath(__file__)
 script_path = os.path.dirname(file_path)
@@ -64,10 +64,11 @@ def main(argv):
     # Transform
     #
 
-    copy_data(
+    blend_data(
+        data_product_manifest=data_product_manifest,
         data_transformation=data_transformation,
         source_path=bronze_path,
-        results_path=silver_path,
+        results_path=gold_path,
         clean=clean,
         quiet=quiet,
     )
@@ -79,8 +80,8 @@ def main(argv):
     update_data_product_manifest(
         data_product_manifest=data_product_manifest,
         config_path=script_path,
-        data_paths=[silver_path, gold_path],
-        file_endings=(".csv"),
+        data_paths=[gold_path],
+        file_endings=(".geojson", ".json"),
     )
 
     generate_data_product_canvas(

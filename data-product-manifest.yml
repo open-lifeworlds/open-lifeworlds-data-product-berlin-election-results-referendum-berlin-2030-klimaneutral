@@ -6,7 +6,7 @@ metadata:
   description:
   url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-election-results-referendum-berlin-2030-klimaneutral
   license: CC-BY 4.0
-  updated: 2025-03-17
+  updated: 2025-03-18
   schema:
 input_ports:
   - id: berlin-lor-geodata-geojson
@@ -56,7 +56,33 @@ input_ports:
       - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-election-results-source-aligned/main/data/03-gold/berlin-election-results-referendum-2023-berlin-2030-klimaneutral/berlin-election-results-referendum-2023-berlin-2030-klimaneutral-districts.csv
       - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-election-results-source-aligned/main/data/03-gold/berlin-election-results-referendum-2023-berlin-2030-klimaneutral/berlin-election-results-referendum-2023-berlin-2030-klimaneutral-electoral-districts.csv
 transformation_steps:
-output_ports: []
+  - name: Blender
+    path: lib/transform/data_blender.py
+    description: blends data into geojson
+output_ports:
+  - id: berlin-election-results-referendum-2023-berlin-2030-klimaneutral-geojson
+    metadata:
+      name: Berlin Election Results Referendum 2023 Berlin 2030 Klimaneutral Geojson
+      owner: Open Lifeworlds
+      description:
+      url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-election-results-referendum-berlin-2030-klimaneutral/tree/main/data/03-gold/berlin-election-results-referendum-2023-berlin-2030-klimaneutral-geojson
+      license: CC-BY 4.0
+      updated: 2025-03-18
+      schema:
+    files:
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-election-results-referendum-berlin-2030-klimaneutral/main/data/03-gold/berlin-election-results-referendum-2023-berlin-2030-klimaneutral-geojson/berlin-election-results-referendum-2023-berlin-2030-klimaneutral-2023-00-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-election-results-referendum-berlin-2030-klimaneutral/main/data/03-gold/berlin-election-results-referendum-2023-berlin-2030-klimaneutral-geojson/berlin-election-results-referendum-2023-berlin-2030-klimaneutral-2023-00-electoral-districts.geojson
+  - id: berlin-election-results-referendum-2023-berlin-2030-klimaneutral-statistics
+    metadata:
+      name: Berlin Election Results Referendum 2023 Berlin 2030 Klimaneutral Statistics
+      owner: Open Lifeworlds
+      description:
+      url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-election-results-referendum-berlin-2030-klimaneutral/tree/main/data/03-gold/berlin-election-results-referendum-2023-berlin-2030-klimaneutral-statistics
+      license: CC-BY 4.0
+      updated: 2025-03-18
+      schema:
+    files:
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-election-results-referendum-berlin-2030-klimaneutral/main/data/03-gold/berlin-election-results-referendum-2023-berlin-2030-klimaneutral-statistics/berlin-election-results-referendum-2023-berlin-2030-klimaneutral-statistics.json
 observability:
   quality:
   operational:

@@ -12,42 +12,17 @@ from lib.tracking_decorator import TrackingDecorator
 
 
 @dataclass
-class Name:
-    name: str
-    type: Optional[str] = "str"
-
-
-@dataclass
-class Dataset:
-    target_file_name: str
-    sheet_name: str
-    header: Optional[int] = None
-    names: Optional[List[Name]] = field(default_factory=list)
-    skip_rows: Optional[int] = 0
-    skip_cols: Optional[int] = 0
-    drop_columns: Optional[List[str]] = field(default_factory=list)
-    head: Optional[int] = None
-
-
-@dataclass
-class Property:
-    name: str
-    rename: Optional[str] = None
-    remove: Optional[bool] = None
-
-
-@dataclass
 class File:
     source_file_name: str
-    target_file_name: str
-    datasets: Optional[List[Dataset]] = field(default_factory=list)
-    properties: Optional[List[Property]] = field(default_factory=list)
+    geojson_template_file_name: str
+    area_type: str
 
 
 @dataclass
 class InputPort:
     id: str
     files: Optional[List[File]] = field(default_factory=list)
+    attributes: Optional[List[str]] = field(default_factory=list)
 
 
 @dataclass

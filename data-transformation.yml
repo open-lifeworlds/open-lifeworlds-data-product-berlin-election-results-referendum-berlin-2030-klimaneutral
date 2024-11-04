@@ -1,2 +1,22 @@
 ---
 input_ports:
+  - id: berlin-election-results-referendum-2023-berlin-2030-klimaneutral
+    files:
+      - source_file_name: berlin-election-results-referendum-2023-berlin-2030-klimaneutral-districts.csv
+        geojson_template_file_name: berlin-lor-geodata-geojson/berlin-lor-districts.geojson
+        area_type: districts
+      - source_file_name: berlin-election-results-referendum-2023-berlin-2030-klimaneutral-electoral-districts.csv
+        geojson_template_file_name: berlin-electoral-districts-berlin-election-2016/berlin-electoral-districts-berlin-election-2016.geojson
+        area_type: electoral-districts
+    attributes:
+      - eligible_voters
+      - voters
+      - invalid_votes
+      - valid_votes
+      - vote_yes
+      - vote_no
+      - voter_turnout
+      - invalid_votes_percentage
+      - valid_votes_percentage
+      - vote_yes_percentage
+      - vote_no_percentage
