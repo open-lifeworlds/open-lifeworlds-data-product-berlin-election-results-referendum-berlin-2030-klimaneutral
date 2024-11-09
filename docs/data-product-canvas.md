@@ -6,7 +6,7 @@
 * owner: Open Lifeworlds
 * url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-election-results-referendum-berlin-2030-klimaneutral
 * license: CC-BY 4.0
-* updated: 2025-03-18
+* updated: 2025-03-19
 
 ## Input Ports
 
@@ -69,7 +69,7 @@
 * owner: Open Lifeworlds
 * url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-election-results-referendum-berlin-2030-klimaneutral/tree/main/data/03-gold/berlin-election-results-referendum-2023-berlin-2030-klimaneutral-geojson
 * license: CC-BY 4.0
-* updated: 2025-03-18
+* updated: 2025-03-19
 
 **Files**
 
@@ -81,7 +81,7 @@
 * owner: Open Lifeworlds
 * url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-election-results-referendum-berlin-2030-klimaneutral/tree/main/data/03-gold/berlin-election-results-referendum-2023-berlin-2030-klimaneutral-statistics
 * license: CC-BY 4.0
-* updated: 2025-03-18
+* updated: 2025-03-19
 
 **Files**
 

@@ -94,7 +94,11 @@ def blend_data(
 
                                     # Read value and convert to float or int respectively
                                     value = statistic_filtered[attribute].iloc[0]
-                                    value =  float(value) if '.' in str(value) else int(value)
+                                    value = (
+                                        float(value)
+                                        if "." in str(value)
+                                        else int(value)
+                                    )
 
                                     feature["properties"][f"{attribute}"] = value
                                     json_statistics[year][half_year][
